@@ -4,6 +4,9 @@ import meet from '/src/assets/images/client-meet.svg'
 import maker from '/src/assets/images/client-maker.svg'
 import heroMobile from '/src/assets/images/image-hero-mobile.png'
 import heroDesktop from '/src/assets/images/image-hero-desktop.png'
+import logo from '/src/assets/images/logo.svg'
+import menu from '/src/assets/images/icon-menu.svg'
+
 
 function App() {
 
@@ -26,7 +29,16 @@ function App() {
           {/*  </nav>*/}
           {/*</header>*/}
 
-          {/*// lg:pl-[170px] lg:pr-[128px]*/}
+          <header>
+            <div className={"flex items-center justify-between px-4 py-6"}>
+              <img src={logo} alt={"Snap Logo"}/>
+              <img src={menu} alt={"Snap Logo"}/>
+            </div>
+            <nav>
+
+            </nav>
+          </header>
+
 
           <main className={"lg:flex lg:pl-[170px] lg:pr-[128px] lg:gap-36"}>
             <picture className={"lg:basis-1/2 lg:order-2"}>
