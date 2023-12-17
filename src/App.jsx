@@ -22,123 +22,122 @@ function App() {
     <>
       <div className={"bg-black min-h-screen grid place-items-center"}>
         <div className={"bg-almost-white max-w-screen-sm mx-auto lg:max-w-screen-lg lg:h-[900px] w-full font-Epilogue"}>
-          {/*<header>*/}
-          {/*  <nav>*/}
-          {/*    <a>Features</a>*/}
-          {/*    <a>Company</a>*/}
-          {/*    <a>Careers</a>*/}
-          {/*    <a>About</a>*/}
 
-          {/*    <div>*/}
-          {/*      <a>Login</a>*/}
-          {/*      <a>Register</a>*/}
-          {/*    </div>*/}
-          {/*  </nav>*/}
-          {/*</header>*/}
-
-          <header className={"lg:px-[40px] lg:py-[24px] lg:flex lg:items-center"}>
+          <header className={"lg:px-[40px] lg:py-[24px] lg:flex lg:items-center px-4 py-6"}>
             {/*<div className={"flex items-center justify-between px-4 py-6"}>*/}
             {/*  <img src={logo} alt={"Snap Logo"}/>*/}
             {/*  <img src={menu} alt={"Snap Logo"}/>*/}
             {/*</div>*/}
             {/*<img src={logo} alt={"Snap Logo"}/>*/}
-            <nav className={"lg:flex gap-x-[2.4rem] items-start"}>
+            <nav className={"flex lg:gap-x-[2.4rem] lg:items-start"}>
               <img className={""} src={logo} alt={"Snap Logo"}/>
-              <div className={"pl-[1.5rem]"}>
-                <button className={"group flex items-center space-x-2 "}
-                        onClick={() => setIsFeatureMenuOpen(!isFeatureMenuOpen)}>
-                  <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>Features</span>
-                  <svg className={"relative stroke-medium-gray group-hover:stroke-black"} width="10" height="6"
-                       xmlns="http://www.w3.org/2000/svg">
-                    <path strokeWidth="1.5" fill="none" d="m1 1 4 4 4-4"/>
-                  </svg>
-                </button>
 
-                {isFeatureMenuOpen &&
-                    (
-                        <>
-                          <div
-                              className={"absolute left-[43rem] top-[17.5rem] bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
-                            <div className={"flex justify-start items-center space-x-4"}>
-                              <img className={"scale-100 w-[16px] h-[16px]"} src={iconTodo} alt={""}/>
-                              <a className={" "} href={""}>Todo List</a>
-                            </div>
-
-                            <div className={"flex justify-start items-center space-x-4"}>
-                              <img className={"scale-100 w-[16px] h-[16px]"} src={iconCalendar} alt={""}/>
-                              <a className={""} href={""}>Calendar</a>
-                            </div>
-
-                            <div className={"flex justify-start items-center space-x-4"}>
-                              <img className={"scale-100 w-[16px] h-[16px]"} src={iconReminder} alt={""}/>
-                              <a className={""} href={""}>Reminders</a>
-                            </div>
-
-                            <div className={"flex justify-start items-center space-x-4"}>
-                              <img className={"scale-100 w-[16px] h-[16px]"} src={iconPlanning} alt={""}/>
-                              <a className={""} href={""}>Planning</a>
-                            </div>
-
-                          </div>
-                        </>
-                    )}
+              {/*Mobile Nav Bar*/}
+              <div className={"lg:hidden ml-auto"}>
+                <img className={"ml-auto"} src={menu} alt={""}/>
               </div>
 
+              {/*Left side Desktop Nav Bar*/}
+              <div className={"sm:hidden lg:flex gap-x-[2.4rem]"}>
+                <div className={"pl-[1.5rem]"}>
+                  <button className={"group flex items-center space-x-2 "}
+                          onClick={() => setIsFeatureMenuOpen(!isFeatureMenuOpen)}>
+                    <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>Features</span>
+                    <svg className={"relative stroke-medium-gray group-hover:stroke-black"} width="10" height="6"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path strokeWidth="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                    </svg>
+                  </button>
 
-              <div>
-                <button className={"group flex items-center space-x-2 relative"}
-                        onClick={() => setIsCompanyMenuOpen(!isCompanyMenuOpen)}>
-                  <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>Company</span>
-                  <svg className={"stroke-medium-gray group-hover:stroke-black"} width="10" height="6"
-                       xmlns="http://www.w3.org/2000/svg">
-                    <path strokeWidth="1.5" fill="none" d="m1 1 4 4 4-4"/>
-                  </svg>
-                </button>
+                  {isFeatureMenuOpen &&
+                      (
+                          <>
+                            <div
+                                className={"absolute left-[24.5rem] top-[17.5rem] bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
+                              <div className={"flex justify-start items-center space-x-4"}>
+                                <img className={"scale-100 w-[16px] h-[16px]"} src={iconTodo} alt={""}/>
+                                <a className={" "} href={""}>Todo List</a>
+                              </div>
 
-                {isCompanyMenuOpen &&
-                    (
-                        <>
-                          <div
-                              className={"absolute bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
+                              <div className={"flex justify-start items-center space-x-4"}>
+                                <img className={"scale-100 w-[16px] h-[16px]"} src={iconCalendar} alt={""}/>
+                                <a className={""} href={""}>Calendar</a>
+                              </div>
 
+                              <div className={"flex justify-start items-center space-x-4"}>
+                                <img className={"scale-100 w-[16px] h-[16px]"} src={iconReminder} alt={""}/>
+                                <a className={""} href={""}>Reminders</a>
+                              </div>
 
-                            <div className={"flex justify-start items-center"}>
+                              <div className={"flex justify-start items-center space-x-4"}>
+                                <img className={"scale-100 w-[16px] h-[16px]"} src={iconPlanning} alt={""}/>
+                                <a className={""} href={""}>Planning</a>
+                              </div>
 
-                              <a className={""} href={""}>History</a>
                             </div>
+                          </>
+                      )}
+                </div>
 
-                            <div className={"flex justify-start items-center"}>
 
-                              <a className={""} href={""}>Our Team</a>
+                <div>
+                  <button className={"group flex items-center space-x-2 relative"}
+                          onClick={() => setIsCompanyMenuOpen(!isCompanyMenuOpen)}>
+                    <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>Company</span>
+                    <svg className={"stroke-medium-gray group-hover:stroke-black"} width="10" height="6"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path strokeWidth="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                    </svg>
+                  </button>
+
+                  {isCompanyMenuOpen &&
+                      (
+                          <>
+                            <div
+                                className={"absolute bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
+
+
+                              <div className={"flex justify-start items-center"}>
+
+                                <a className={""} href={""}>History</a>
+                              </div>
+
+                              <div className={"flex justify-start items-center"}>
+
+                                <a className={""} href={""}>Our Team</a>
+                              </div>
+
+                              <div className={"flex justify-start items-center"}>
+
+                                <a className={""} href={""}>Blog</a>
+                              </div>
+
                             </div>
+                          </>
+                      )}
 
-                            <div className={"flex justify-start items-center"}>
+                </div>
 
-                              <a className={""} href={""}>Blog</a>
-                            </div>
+                <div>
+                  <button className={"group flex items-center space-x-2 relative"}>
+                    <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>Careers</span>
+                  </button>
+                </div>
 
-                          </div>
-                        </>
-                    )}
+                <div>
+                  <button className={"group flex items-center space-x-2 relative"}>
+                    <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>About</span>
+                  </button>
+                </div>
+
 
               </div>
-
-              <div>
-                <button className={"group flex items-center space-x-2 relative"}>
-                  <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>Careers</span>
-                </button>
-              </div>
-
-              <div>
-                <button className={"group flex items-center space-x-2 relative"}>
-                  <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>About</span>
-                </button>
-              </div>
-
 
 
             </nav>
-            <div className={"ml-auto flex items-center gap-x-[2.4rem]"}>
+
+            {/*Right side Desktop Nav Bar*/}
+            <div className={"hidden lg:flex ml-auto items-center gap-x-[2.4rem]"}>
               <div>
                 <button className={"group flex items-center space-x-2 relative"}>
                   <span className={"text-medium-gray font-medium hover:text-black text-[14px]"}>Login</span>
@@ -166,12 +165,12 @@ function App() {
             <div className={"lg:basis-[50%] px-4 lg:order-1 lg:px-0 lg:pt-14"}>
               <h1 className={"text-center text-4xl font-semibold pt-12 lg:text-[78.2px] lg:font-bold lg:leading-[5rem] lg:text-left lg:pr-12"}>Make
                 remote work</h1>
-              <p className={"text-medium-gray text-center font-normal pt-5 lg:text-left lg:text-[18.3px] lg:pt-12 lg:pr-24"}>
+              <p className={"text-medium-gray text-center font-normal leading-[1.65rem] lg:leading-[1.75rem] text-[1.02rem] pt-5 lg:text-left lg:text-[18.3px] lg:pt-12 lg:pr-24"}>
                 Get your team in sync, no matter your location. Streamline processes,
                 create team rituals, and watch productivity soar.
               </p>
 
-              <div className={"flex pt-7 lg:pt-14"}>
+              <div className={"flex pt-7 lg:pt-14 justify-center lg:justify-start"}>
                 <button className={"bg-black px-[1.4rem] py-3 rounded-xl lg:px-[2.05rem] lg:py-[1rem]"}>
                   <span className={"text-almost-white font-semibold lg:text-[17px] leading-3"}>Learn more</span>
                 </button>
