@@ -40,7 +40,7 @@ function App() {
 
               {/*Left side Desktop Nav Bar*/}
               <div className={"sm:hidden lg:flex gap-x-[2.4rem]"}>
-                <div className={"pl-[1.5rem]"}>
+                <div className={"pl-[1.5rem] relative"}>
                   <button className={"group flex items-center space-x-2 "}
                           onClick={() => setIsFeatureMenuOpen(!isFeatureMenuOpen)}>
                     <span className={"text-medium-gray font-medium hover:text-black text-sm leading-none"}>Features</span>
@@ -54,7 +54,7 @@ function App() {
                       (
                           <>
                             <div
-                                className={"absolute left-[24.5rem] top-[17.5rem] bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
+                                className={"absolute left-[-1.9rem] top-[2rem] bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
                               <div className={"flex justify-start items-center space-x-4"}>
                                 <img className={"scale-100 w-[16px] h-[16px]"} src={iconTodo} alt={""}/>
                                 <a className={" "} href={""}>Todo List</a>
@@ -95,7 +95,7 @@ function App() {
                       (
                           <>
                             <div
-                                className={"absolute bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
+                                className={"mt-[1.1rem] absolute bg-white rounded-2xl drop-shadow-2xl px-5 py-5 space-y-2 text-[14px] text-medium-gray"}>
 
 
                               <div className={"flex justify-start items-center"}>
