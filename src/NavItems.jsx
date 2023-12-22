@@ -10,12 +10,12 @@ const NavItems = ({ handleFeatureMenu, isFeatureMenuOpen, handleCompanyMenu, isC
     <>
       <div className={"gap-x-[2.4rem] space-y-6 lg:flex"}>
         <div className={"relative lg:pl-[1.5rem]"}>
-          <Button buttonText={"Features"} onclick={handleFeatureMenu} hasSubMenu={true} />
+          <Button buttonText={"Features"} onclick={handleFeatureMenu} hasSubMenu={true} isMenuOpen={isFeatureMenuOpen} />
           {isFeatureMenuOpen && <FeaturesMenu />}
         </div>
 
         <div>
-          <Button buttonText={"Company"} onclick={handleCompanyMenu} hasSubMenu={true} />
+          <Button buttonText={"Company"} onclick={handleCompanyMenu} hasSubMenu={true} isMenuOpen={isCompanyMenuOpen} />
           {isCompanyMenuOpen && <CompanyMenu />}
         </div>
 
