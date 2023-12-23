@@ -45,9 +45,8 @@ const Nav = ({ handleFeatureMenu, isFeatureMenuOpen, handleCompanyMenu, isCompan
             )}
           </>
         ) : (
-          <></>
+          <NavItems handleFeatureMenu={handleFeatureMenu} isFeatureMenuOpen={isFeatureMenuOpen} handleCompanyMenu={handleCompanyMenu} isCompanyMenuOpen={isCompanyMenuOpen} handleMobileMenu={handleMobileMenu} isMobileMenuOpen={isMobileMenuOpen} />
         )}
-        {/*<NavItems handleFeatureMenu={handleFeatureMenu} isFeatureMenuOpen={isFeatureMenuOpen} handleCompanyMenu={handleCompanyMenu} isCompanyMenuOpen={isCompanyMenuOpen} handleMobileMenu={handleMobileMenu} isMobileMenuOpen={isMobileMenuOpen} />*/}
       </nav>
     </>
   );
