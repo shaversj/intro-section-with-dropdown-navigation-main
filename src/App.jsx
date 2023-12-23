@@ -1,20 +1,11 @@
+import { useState } from "react";
+import Nav from "./components/Nav.jsx";
 import databiz from "/src/assets/images/client-databiz.svg";
 import audiophile from "/src/assets/images/client-audiophile.svg";
 import meet from "/src/assets/images/client-meet.svg";
 import maker from "/src/assets/images/client-maker.svg";
 import heroMobile from "/src/assets/images/image-hero-mobile.png";
 import heroDesktop from "/src/assets/images/image-hero-desktop.png";
-import logo from "/src/assets/images/logo.svg";
-import menu from "/src/assets/images/icon-menu.svg";
-import closeMenu from "/src/assets/images/icon-close-menu.svg";
-import arrowDown from "/src/assets/images/icon-arrow-down.svg";
-import arrowUp from "/src/assets/images/icon-arrow-up.svg";
-import iconTodo from "/src/assets/images/icon-todo.svg";
-import iconCalendar from "/src/assets/images/icon-calendar.svg";
-import iconReminder from "/src/assets/images/icon-reminders.svg";
-import iconPlanning from "/src/assets/images/icon-planning.svg";
-import { useState } from "react";
-import Nav from "./Nav.jsx";
 
 function App() {
   const [isFeatureMenuOpen, setIsFeatureMenuOpen] = useState(false);
@@ -38,7 +29,14 @@ function App() {
       <div className={"grid min-h-screen place-items-center bg-black"}>
         <div className={"mx-auto w-full max-w-screen-sm bg-almost-white font-Epilogue lg:h-[900px] lg:max-w-screen-lg"}>
           <header className={"flex items-center sm:px-4 sm:py-6 lg:gap-x-[1.5rem] lg:px-[40px] lg:pt-[20px]"}>
-            <Nav handleFeatureMenu={handleFeatureMenu} handleCompanyMenu={handleCompanyMenu} handleMobileMenu={handleMobileMenu} isFeatureMenuOpen={isFeatureMenuOpen} isCompanyMenuOpen={isCompanyMenuOpen} isMobileMenuOpen={isMobileMenuOpen} />
+            <Nav
+              handleFeatureMenu={handleFeatureMenu}
+              handleCompanyMenu={handleCompanyMenu}
+              handleMobileMenu={handleMobileMenu}
+              isFeatureMenuOpen={isFeatureMenuOpen}
+              isCompanyMenuOpen={isCompanyMenuOpen}
+              isMobileMenuOpen={isMobileMenuOpen}
+            />
           </header>
 
           <main className={"lg:flex lg:pl-[165px] lg:pr-[128px] lg:pt-[2.7rem]"}>
@@ -48,9 +46,21 @@ function App() {
             </picture>
 
             <div className={"px-4 lg:order-1 lg:basis-[50%] lg:px-0 lg:pt-14"}>
-              <h1 className={"pt-12 text-center text-4xl font-semibold lg:pr-12 lg:text-left lg:text-[78.2px] lg:font-bold lg:leading-[5rem]"}>Make remote work</h1>
-              <p className={"pt-5 text-center text-[1.02rem] font-normal leading-[1.65rem] text-medium-gray lg:pr-24 lg:pt-12 lg:text-left lg:text-[18.3px] lg:leading-[1.75rem]"}>
-                Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+              <h1
+                className={
+                  "pt-12 text-center text-4xl font-semibold lg:pr-12 lg:text-left lg:text-[78.2px] lg:font-bold lg:leading-[5rem]"
+                }
+              >
+                Make remote work
+              </h1>
+              <p
+                className={
+                  "pt-5 text-center text-[1.02rem] font-normal leading-[1.65rem] text-medium-gray lg:pr-24 lg:pt-12 " +
+                  "lg:text-left lg:text-[18.3px] lg:leading-[1.75rem]"
+                }
+              >
+                Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+                productivity soar.
               </p>
 
               <div className={"flex justify-center pt-7 lg:justify-start lg:pt-14"}>
