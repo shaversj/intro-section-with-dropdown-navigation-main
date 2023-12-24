@@ -42,7 +42,7 @@ const NavItems = ({ handleFeatureMenu, showFeatureMenu, handleCompanyMenu, showC
         </div>
       </div>
 
-      {(showMobileMenu || width > 1440) && (
+      {(showMobileMenu || width >= 1440) && (
         <div className={"pt-10 lg:ml-auto lg:flex lg:items-center lg:justify-end lg:gap-x-[2.4rem] lg:pt-0"}>
           <div className={"flex justify-center lg:flex-none"}>
             <A text={"Login"} href={"/login"} varient={"secondary"} />

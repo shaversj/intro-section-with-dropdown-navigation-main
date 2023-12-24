@@ -14,7 +14,7 @@ const Nav = ({ handleFeatureMenu, showFeatureMenu, handleCompanyMenu, showCompan
           <>
             <div className={"ml-auto"}>
               <button onClick={handleMobileMenu}>
-                <img className={""} src={menu} alt={""} />
+                <img className={""} src={menu} alt={""} aria-label={"Button to expand mobile menu"} />
               </button>
             </div>
 
