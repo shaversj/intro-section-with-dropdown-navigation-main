@@ -4,7 +4,7 @@ import menu from "../assets/images/icon-menu.svg";
 import closeMenu from "/src/assets/images/icon-close-menu.svg";
 import logo from "/src/assets/images/logo.svg";
 
-const Nav = ({ handleFeatureMenu, isFeatureMenuOpen, handleCompanyMenu, isCompanyMenuOpen, handleMobileMenu, isMobileMenuOpen }) => {
+const Nav = ({ handleFeatureMenu, showFeatureMenu, handleCompanyMenu, showCompanyMenu, handleMobileMenu, showMobileMenu }) => {
   const { height, width } = useWindowDimensions();
   return (
     <>
@@ -18,7 +18,7 @@ const Nav = ({ handleFeatureMenu, isFeatureMenuOpen, handleCompanyMenu, isCompan
               </button>
             </div>
 
-            {isMobileMenuOpen && (
+            {showMobileMenu && (
               <>
                 <div className={"absolute right-[-1rem] top-[-1.5rem] min-h-[796px] w-[239px] bg-almost-white"}>
                   <div className={"flex"}>
@@ -30,11 +30,11 @@ const Nav = ({ handleFeatureMenu, isFeatureMenuOpen, handleCompanyMenu, isCompan
                   </div>
                   <NavItems
                     handleFeatureMenu={handleFeatureMenu}
-                    isFeatureMenuOpen={isFeatureMenuOpen}
+                    showFeatureMenu={showFeatureMenu}
                     handleCompanyMenu={handleCompanyMenu}
-                    isCompanyMenuOpen={isCompanyMenuOpen}
+                    showCompanyMenu={showCompanyMenu}
                     handleMobileMenu={handleMobileMenu}
-                    isMobileMenuOpen={isMobileMenuOpen}
+                    showMobileMenu={showMobileMenu}
                   />
                 </div>
               </>
@@ -43,11 +43,11 @@ const Nav = ({ handleFeatureMenu, isFeatureMenuOpen, handleCompanyMenu, isCompan
         ) : (
           <NavItems
             handleFeatureMenu={handleFeatureMenu}
-            isFeatureMenuOpen={isFeatureMenuOpen}
+            showFeatureMenu={showFeatureMenu}
             handleCompanyMenu={handleCompanyMenu}
-            isCompanyMenuOpen={isCompanyMenuOpen}
+            showCompanyMenu={showCompanyMenu}
             handleMobileMenu={handleMobileMenu}
-            isMobileMenuOpen={isMobileMenuOpen}
+            showMobileMenu={showMobileMenu}
           />
         )}
       </nav>

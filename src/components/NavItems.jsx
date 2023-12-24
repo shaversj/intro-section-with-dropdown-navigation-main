@@ -3,14 +3,7 @@ import A from "./A.jsx";
 import Button from "./Button.jsx";
 import useWindowDimensions from "../hooks/useWindowDimensions.jsx";
 
-const NavItems = ({
-  handleFeatureMenu,
-  isFeatureMenuOpen,
-  handleCompanyMenu,
-  isCompanyMenuOpen,
-  handleMobileMenu,
-  isMobileMenuOpen,
-}) => {
+const NavItems = ({ handleFeatureMenu, showFeatureMenu, handleCompanyMenu, showCompanyMenu, handleMobileMenu, showMobileMenu }) => {
   const { height, width } = useWindowDimensions();
 
   const featureData = {
@@ -34,24 +27,12 @@ const NavItems = ({
     <>
       <div className={"gap-x-[2.4rem] space-y-6 lg:flex lg:gap-x-[1.2rem] lg:space-y-0"}>
         <div className={"relative lg:-ml-3"}>
-          <Button
-            variant={"primary"}
-            buttonText={"Features"}
-            onclick={handleFeatureMenu}
-            hasSubMenu={true}
-            isMenuOpen={isFeatureMenuOpen}
-          />
-          {isFeatureMenuOpen && <SubMenu subMenuName={"Feature"} menuData={featureData} />}
+          <Button variant={"primary"} buttonText={"Features"} onclick={handleFeatureMenu} hasSubMenu={true} isMenuOpen={showFeatureMenu} />
+          {showFeatureMenu && <SubMenu subMenuName={"Feature"} menuData={featureData} />}
         </div>
         <div>
-          <Button
-            variant={"primary"}
-            buttonText={"Company"}
-            onclick={handleCompanyMenu}
-            hasSubMenu={true}
-            isMenuOpen={isCompanyMenuOpen}
-          />
-          {isCompanyMenuOpen && <SubMenu subMenuName={"Company"} menuData={companyData} />}
+          <Button variant={"primary"} buttonText={"Company"} onclick={handleCompanyMenu} hasSubMenu={true} isMenuOpen={showCompanyMenu} />
+          {showCompanyMenu && <SubMenu subMenuName={"Company"} menuData={companyData} />}
         </div>
         <div>
           <A text={"Careers"} href={"/careers"} varient={"primary"} />
@@ -61,7 +42,7 @@ const NavItems = ({
         </div>
       </div>
 
-      {(isMobileMenuOpen || width > 1440) && (
+      {(showMobileMenu || width > 1440) && (
         <div className={"pt-10 lg:ml-auto lg:flex lg:items-center lg:justify-end lg:gap-x-[2.4rem] lg:pt-0"}>
           <div className={"flex justify-center lg:flex-none"}>
             <A text={"Login"} href={"/login"} varient={"secondary"} />
