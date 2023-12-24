@@ -8,10 +8,10 @@ const NavItems = ({ handleFeatureMenu, showFeatureMenu, handleCompanyMenu, showC
 
   const featureData = {
     items: [
-      { id: 1, name: "Todo List", imagePath: "/icon-todo.svg" },
-      { id: 2, name: "Calendar", imagePath: "/icon-calendar.svg" },
-      { id: 3, name: "Reminders", imagePath: "/icon-reminders.svg" },
-      { id: 4, name: "Planning", imagePath: "/icon-planning.svg" },
+      { id: 1, name: "Todo List", imagePath: "./icon-todo.svg" },
+      { id: 2, name: "Calendar", imagePath: "./icon-calendar.svg" },
+      { id: 3, name: "Reminders", imagePath: "./icon-reminders.svg" },
+      { id: 4, name: "Planning", imagePath: "./icon-planning.svg" },
     ],
   };
 
